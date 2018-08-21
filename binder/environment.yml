@@ -5,7 +5,6 @@ channels:
 dependencies:
   - futures
   - seaborn
-  - scijava-jupyter-kernel
   - pip:
     - jupyter_dashboards==0.4.1 
     - jupyter_declarativewidgets==0.4.3
