@@ -1,0 +1,15 @@
+# spark install
+APACHE_SPARK_VERSION=2.2.2
+cd /tmp && \
+        wget -q http://apache.claz.org/spark/spark-${APACHE_SPARK_VERSION}/spark-${APACHE_SPARK_VERSION}-bin-hadoop2.6.tgz && \
+        tar xzf spark-${APACHE_SPARK_VERSION}-bin-hadoop2.6.tgz -C /usr/local && \
+        rm spark-${APACHE_SPARK_VERSION}-bin-hadoop2.6.tgz
+cd /usr/local && ln -s spark-${APACHE_SPARK_VERSION}-bin-hadoop2.6 spark
+SPARK_HOME=/usr/local/spark
+# jupyter / toree code
+jupyter declarativewidgets install --user --symlink
+jupyter dashboards install --user --symlink
+jupyter dashboards activate
+jupyter declarativewidgets activate
+jupyter dashboards_bundlers activate
+jupyter toree install --user
