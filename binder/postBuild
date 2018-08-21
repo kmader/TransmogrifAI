@@ -1,11 +1,12 @@
 # spark install
 APACHE_SPARK_VERSION=2.2.2
+SP_DIR=/home/jovyan/ 
 cd /tmp && \
         wget -q http://apache.claz.org/spark/spark-${APACHE_SPARK_VERSION}/spark-${APACHE_SPARK_VERSION}-bin-hadoop2.6.tgz && \
-        tar xzf spark-${APACHE_SPARK_VERSION}-bin-hadoop2.6.tgz -C /usr/local && \
+        tar xzf spark-${APACHE_SPARK_VERSION}-bin-hadoop2.6.tgz -C $SP_DIR && \
         rm spark-${APACHE_SPARK_VERSION}-bin-hadoop2.6.tgz
-cd /usr/local && ln -s spark-${APACHE_SPARK_VERSION}-bin-hadoop2.6 spark
-SPARK_HOME=/usr/local/spark
+cd $SP_DIR && mv spark-${APACHE_SPARK_VERSION}-bin-hadoop2.6 spark
+SPARK_HOME="$SP_DIR/spark"
 # jupyter / toree code
 jupyter declarativewidgets install --user --symlink
 jupyter dashboards install --user --symlink
