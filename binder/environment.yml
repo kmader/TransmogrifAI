@@ -1,0 +1,13 @@
+name: transmorgrifai
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - futures
+  - seaborn
+  - scijava-jupyter-kernel
+  - pip:
+    - jupyter_dashboards==0.4.1 
+    - jupyter_declarativewidgets==0.4.3
+    - jupyter_dashboards_bundlers==0.2.2
+    - toree>=0.1.0.dev0
