@@ -14,5 +14,3 @@ jupyter dashboards activate
 jupyter declarativewidgets activate
 jupyter dashboards_bundlers activate
 jupyter toree install --user --spark_home=$SPARK_HOME
-# build a fresh copy of TransmogrifAI
-sh gradlew distZip -x test
