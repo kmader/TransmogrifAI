@@ -13,4 +13,4 @@ jupyter dashboards install --user --symlink
 jupyter dashboards activate
 jupyter declarativewidgets activate
 jupyter dashboards_bundlers activate
-jupyter toree install --user
+jupyter toree install --user --spark_home=$SPARK_HOME
