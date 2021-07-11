@@ -1,3 +1,8 @@
+# java installation
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install java 9.0.1-oracle
+
 # spark install
 APACHE_SPARK_VERSION=2.2.2
 SP_DIR=/home/jovyan/ 
